@@ -1,14 +1,20 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Indie Flower', cursive;
 }
 
 .wrapper {
-  margin: 4% auto;
-  background: #ff9f8f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 30%;
   padding: 2% 2% 4%;
-  position: relative;
+  background-color: #fbfbfb;
+  -webkit-box-shadow: 2px 2px 20px 2px rgba(22, 22, 22, 0.253);
+          box-shadow: 2px 2px 20px 2px rgba(22, 22, 22, 0.253);
 }
 
 .wrapper h1 {
@@ -37,33 +43,64 @@ body {
           justify-content: flex-start;
   position: relative;
   height: 50px;
-  line-height: 5px;
+  line-height: 12px;
   margin: 5px;
   font-size: 1.3em;
-  border: 1px solid black;
 }
 
-.wrapper .taskList .task .checkbox {
-  margin: 2.6%;
-  width: 20px;
-  height: 20px;
-  background-color: green;
+.wrapper .taskList .task:hover {
+  background-color: rgba(170, 169, 169, 0.192);
+  cursor: pointer;
 }
 
+.wrapper .taskList .task:last-child {
+  margin-bottom: 20px;
+}
+
+.wrapper .taskList .task p {
+  margin-left: 3%;
+}
+
+.wrapper .taskList .task .checkbox,
 .wrapper .taskList .task .rmvBtn {
   margin: 2.6%;
   width: 20px;
   height: 20px;
-  background-color: red;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.wrapper .taskList .task .checkbox:hover,
+.wrapper .taskList .task .rmvBtn:hover {
+  -webkit-transform: scale(1.051);
+          transform: scale(1.051);
+}
+
+.wrapper .taskList .task .rmvBtn {
   position: absolute;
   right: 0%;
-  border-radius: 50%;
+}
+
+.wrapper .taskList .task .checkbox {
+  border: 1px solid black;
 }
 
 .wrapper button {
-  width: 60%;
-  margin: 2% 15% 0%;
+  width: 30%;
+  margin: 2% 30%;
   height: 50px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
   position: absolute;
+  border: none;
+  background-color: #22a6b3;
+  color: white;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

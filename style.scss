@@ -1,13 +1,17 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Indie Flower', cursive;
 }
 .wrapper{
-    margin: 4% auto;
-    background: rgb(255, 159, 143);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 30%;
     padding: 2% 2% 4%;
-    position: relative;
+    background-color: rgb(251, 251, 251);
+    box-shadow: 2px 2px 20px 2px rgba(22, 22, 22, 0.253);
 h1{
     text-align: center;
     margin: 0 0 5%;
@@ -23,34 +27,58 @@ h1{
       justify-content: flex-start;
       position: relative;
       height: 50px;
-      line-height: 5px;
+      line-height: 12px;
       margin: 5px;
       font-size: 1.3em;
-      border: 1px solid black;
-    .checkbox{
+      &:hover{
+          background-color: rgba(170, 169, 169, 0.192);
+          cursor: pointer;
+      }
+      &:last-child{
+          margin-bottom: 20px;
+      }
+    p{
+        margin-left: 3%;
+    }  
+    .checkbox,
+    .rmvBtn
+    {
         margin: 2.6%;
         width: 20px;
         height: 20px;
-        background-color: green;
+        cursor:pointer;
+        border-radius: 50%;
+        transform: scale(1);
+        transition: .2s ease;
+        &:hover{
+            transform: scale(1.051);
+        }
     }
     .rmvBtn{
-        margin: 2.6%;
-        width: 20px;
-        height: 20px;
-        background-color: red;
+        // background-color: #eb4d4b;
         position: absolute;
         right: 0%;
-        border-radius: 50%;
     }
-
-      }
+    .checkbox{
+        border: 1px solid black;
+        
+    }
+    }
+   
    
     }
     button{
-        width: 60%;
-        margin: 2% 15% 0%;
+        width: 30%;
+        margin: 2% 30%;
         height: 50px;
+        font-size: 1.3em;
+        font-family: 'Open Sans', sans-serif;
         position: absolute;
-        
+        border: none;
+        background-color: #22a6b3;
+        color: white;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
     }
 }
