@@ -5,10 +5,15 @@ body {
 
 .wrapper {
   margin: 4% auto;
-  background: tomato;
-  width: 40%;
-  padding: 3% 2%;
+  background: #ff9f8f;
+  width: 30%;
+  padding: 2% 2% 4%;
   position: relative;
+}
+
+.wrapper h1 {
+  text-align: center;
+  margin: 0 0 5%;
 }
 
 .wrapper .taskList {
@@ -19,7 +24,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -31,22 +36,22 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
-  height: 60px;
-  line-height: 18px;
+  height: 50px;
+  line-height: 5px;
   margin: 5px;
   font-size: 1.3em;
   border: 1px solid black;
 }
 
 .wrapper .taskList .task .checkbox {
-  margin: 3%;
+  margin: 2.6%;
   width: 20px;
   height: 20px;
   background-color: green;
 }
 
 .wrapper .taskList .task .rmvBtn {
-  margin: 3%;
+  margin: 2.6%;
   width: 20px;
   height: 20px;
   background-color: red;
@@ -56,8 +61,8 @@ body {
 }
 
 .wrapper button {
-  width: 80%;
-  margin: 5%;
+  width: 60%;
+  margin: 2% 15% 0%;
   height: 50px;
   position: absolute;
 }
