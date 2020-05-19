@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    margin: 4% auto;
+    background: tomato;
+    width: 40%;
+    padding: 3% 2%;
+    position: relative;
+.taskList{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+.task
+    {
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      height: 60px;
+      line-height: 18px;
+      margin: 5px;
+      font-size: 1.3em;
+      border: 1px solid black;
+    .checkbox{
+        margin: 3%;
+        width: 20px;
+        height: 20px;
+        background-color: green;
+    }
+    .rmvBtn{
+        margin: 3%;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        position: absolute;
+        right: 0%;
+        border-radius: 50%;
+    }
+
+      }
+   
+    }
+    button{
+        width: 80%;
+        margin: 5%;
+        height: 50px;
+        position: absolute;
+        
+    }
+}
