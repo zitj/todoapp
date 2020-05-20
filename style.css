@@ -11,10 +11,11 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 30%;
-  padding: 2% 2% 4%;
+  padding: 2% 2% 5%;
   background-color: #fbfbfb;
   -webkit-box-shadow: 2px 2px 20px 2px rgba(22, 22, 22, 0.253);
           box-shadow: 2px 2px 20px 2px rgba(22, 22, 22, 0.253);
+  z-index: -1;
 }
 
 .wrapper h1 {
@@ -89,7 +90,7 @@ body {
   border: 1px solid black;
 }
 
-.wrapper button {
+button {
   width: 30%;
   margin: 2% 30%;
   height: 50px;
@@ -102,5 +103,102 @@ body {
   border-radius: 20px;
   outline: none;
   cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+button:hover {
+  background-color: #22a7b3e1;
+}
+
+button:active {
+  background-color: #22a6b3;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+.blackBackground.active {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.692);
+  z-index: 3;
+}
+
+.blackBackground.active:hover {
+  cursor: pointer;
+}
+
+.popWindow.active {
+  display: block;
+}
+
+.popWindow {
+  display: none;
+  width: 40%;
+  height: 25%;
+  background: white;
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 40px 4px rgba(255, 255, 255, 0.466);
+          box-shadow: 0px 0px 40px 4px rgba(255, 255, 255, 0.466);
+  border-radius: 20px;
+}
+
+.popWindow input {
+  font-family: 'Indie Flower', cursive;
+  border: 1px solid rgba(128, 128, 128, 0.65);
+  border-radius: 20px;
+  width: 75%;
+  margin: 7.4% 12.5% 2%;
+  height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  color: #333333;
+}
+
+.popWindow input:focus {
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.918);
+}
+
+.popWindow .btns {
+  position: relative;
+  width: 80%;
+  margin: 0% 10%;
+  height: 20%;
+}
+
+.popWindow #addBtn {
+  position: absolute;
+  left: -5.5%;
+  width: 50%;
+}
+
+.popWindow #cancelBtn {
+  position: absolute;
+  left: 46%;
+  width: 12%;
+  background: none;
+  color: tomato;
+  border: 1px solid tomato;
+  font-size: .8em;
+  opacity: .8;
+}
+
+.popWindow #cancelBtn:hover {
+  border: none;
+  color: white;
+  background: tomato;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
