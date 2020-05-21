@@ -1,0 +1,29 @@
+[33mcommit 2f7a3d25392c9b92665918611214e890ab192256[m[33m ([m[1;36mHEAD -> [m[1;32madding-JS-and-reordering-HTML[m[33m)[m
+Author: zitj <1eyedea2eyedeas@gmail.com>
+Date:   Wed May 20 13:55:24 2020 +0200
+
+    added animation
+
+[33mcommit 076b58f7acc11c4cb758959e25581c61692beab3[m
+Author: zitj <1eyedea2eyedeas@gmail.com>
+Date:   Wed May 20 13:25:18 2020 +0200
+
+    added app.js file
+
+[33mcommit 71cfc78ceb8a6803c39ec45d89e07f5165a16dcb[m[33m ([m[1;32mmaster[m[33m)[m
+Author: zitj <1eyedea2eyedeas@gmail.com>
+Date:   Tue May 19 13:47:43 2020 +0200
+
+    First version UI
+
+[33mcommit 98d8858aff3a98d86ff8c9405e255181fff49481[m
+Author: zitj <1eyedea2eyedeas@gmail.com>
+Date:   Tue May 19 12:42:50 2020 +0200
+
+    added headline
+
+[33mcommit 8be37c695edcd098129aba93b836373ed167c91b[m
+Author: zitj <1eyedea2eyedeas@gmail.com>
+Date:   Tue May 19 12:26:47 2020 +0200
+
+    building elements
