@@ -1,5 +1,6 @@
 console.log('We are connected!');
 
+const wrapper = document.querySelector('.wrapper');
 const addTaskBtn = document.getElementById('addTaskBtn');
 const blackBackground = document.querySelector('.blackBackground');
 const taskList = document.querySelector('.taskList');
@@ -10,20 +11,18 @@ const popWindowCancelBtn = document.getElementById('cancelBtn');
 const popWindowInput = document.querySelector('input');
 const userInput = document.querySelector('input');
 
-
 let arrayOfTasks = [];
-let counter = parseInt(0);
-
-
 
 const removeClass = () =>{
     popWindow.classList.remove('active');
     blackBackground.classList.remove('active');
+    wrapper.classList.remove('hidden');
 };
 
 const addClass = () =>{
     popWindow.classList.add('active');
     blackBackground.classList.add('active');
+    wrapper.classList.add('hidden');
 };
 
 const clearTaskInput = () => {
@@ -34,20 +33,19 @@ const renderTask = () => {
     const userValue = userInput.value;
     const newTask = document.createElement('div');
     
-    newTask.className = 'task';
+        newTask.className = 'task';
         newTask.innerHTML = `
         <div class="checkbox"></div>
-        <p>${arrayOfTasks[counter]}</p>
+        <p>${userValue}</p>
         <div class="rmvBtn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  width="25" height="25" viewBox="0 0 172 172" style=" fill:#000000;">
         <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M49.5575,44.72l-4.8375,4.8375l36.55,36.4425l-36.55,36.4425l4.8375,4.8375l36.6575,-36.4425l36.55,36.4425l4.8375,-4.8375l-36.55,-36.4425l36.55,-36.4425l-4.8375,-4.8375l-36.55,36.4425z"></path></g></g></svg></div>
         `
         taskList.append(newTask);
-        
     }
-
+    
 const addTaskHandler = () => {
-        let userValue = userInput.value;
-        if(userValue.trim() === ''){
+    let userValue = userInput.value;
+        if(userValue.trim() === '' ){
             alert('Please enter valid task.');
             return;
         }
@@ -57,7 +55,6 @@ const addTaskHandler = () => {
         renderTask();
         removeClass();
         clearTaskInput();
-        counter++;
         console.log(arrayOfTasks);
 }
 
