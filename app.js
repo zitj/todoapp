@@ -18,6 +18,8 @@ const removeClass = () =>{
     popWindow.classList.remove('active');
     blackBackground.classList.remove('active');
     wrapper.classList.remove('hidden');
+    userInput.classList.remove('error');
+    userInput.placeholder = 'Enter your task here';
 };
 
 const addClass = () =>{
@@ -39,7 +41,6 @@ const renderTask = () => {
     const newTask = document.createElement('div');
     const checkBox = document.createElement('div');
     const textHolder = document.createElement('p');
-    const overLine = document.createElement('span');
     const removeBtn = document.createElement('div');
 
     newTask.className = 'task';
@@ -64,7 +65,8 @@ const renderTask = () => {
 const addTaskHandler = () => {
     let userValue = userInput.value;
         if(userValue.trim() === '' ){
-            alert('Please enter valid task.');
+            userInput.classList.add('error');
+            setTimeout(() => { userInput.classList.remove('error') }, 1200);
             return;
         }
         else{
@@ -74,7 +76,7 @@ const addTaskHandler = () => {
         removeClass();
         clearTaskInput();
 }
-
+  
   addTaskBtn.addEventListener('click', addClass);
   blackBackground.addEventListener('click', removeClass);
   popWindowCancelBtn.addEventListener('click', removeClass);
