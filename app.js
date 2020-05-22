@@ -66,7 +66,7 @@ const addTaskHandler = () => {
     let userValue = userInput.value;
         if(userValue.trim() === '' ){
             userInput.classList.add('error');
-            setTimeout(() => { userInput.classList.remove('error') }, 1200);
+            setTimeout(() => { userInput.classList.remove('error') }, 600);
             return;
         }
         else{
