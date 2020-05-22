@@ -39,7 +39,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -70,13 +70,18 @@ body {
   margin-left: 3%;
 }
 
+.wrapper .taskList .task p.completed {
+  color: #777777;
+  text-decoration: line-through;
+}
+
 .wrapper .taskList .task .checkbox,
 .wrapper .taskList .task .rmvBtn {
-  margin: 2.6%;
+  margin: 3.2%;
   width: 20px;
   height: 20px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 3px;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: .2s ease;
@@ -89,9 +94,19 @@ body {
           transform: scale(1.051);
 }
 
+.wrapper .taskList .task .checkbox:active,
+.wrapper .taskList .task .rmvBtn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .wrapper .taskList .task .rmvBtn {
   position: absolute;
   right: 0%;
+}
+
+.wrapper .taskList .task .rmvBtn svg {
+  margin: -2px 0px 0px -2px;
 }
 
 .wrapper .taskList .task .checkbox {

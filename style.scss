@@ -27,7 +27,7 @@ h1{
 .taskList{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     
 .task
@@ -48,25 +48,36 @@ h1{
       }
     p{
         margin-left: 3%;
-    }  
+    }
+    p.completed{
+        color: #777777;
+        text-decoration: line-through;
+    }
+   
     .checkbox,
     .rmvBtn
     {
-        margin: 2.6%;
+        margin: 3.2%;
         width: 20px;
         height: 20px;
         cursor:pointer;
-        border-radius: 50%;
+        border-radius: 3px;
         transform: scale(1);
         transition: .2s ease;
         &:hover{
             transform: scale(1.051);
+        }
+        &:active{
+            transform: scale(.9);
         }
     }
     .rmvBtn{
         // background-color: #eb4d4b;
         position: absolute;
         right: 0%;
+        svg{
+            margin: -2px 0px 0px -2px;
+        }
     }
     .checkbox{
         border: 1px solid black;
