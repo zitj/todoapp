@@ -47,6 +47,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -68,6 +69,8 @@ body {
 
 .wrapper .taskList .task p {
   margin-left: 3%;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 .wrapper .taskList .task p.completed {
@@ -111,6 +114,31 @@ body {
 
 .wrapper .taskList .task .checkbox {
   border: 1px solid black;
+}
+
+.wrapper .taskList .task .checkbox svg {
+  stroke: #22b33a;
+  stroke-width: 1.8;
+  fill: none;
+  margin-bottom: -10px;
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+  -webkit-transition: stroke-dashoffset .2s linear;
+  transition: stroke-dashoffset .2s linear;
+}
+
+.wrapper .taskList .task .checkbox.completed svg {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset .2s linear;
+  transition: stroke-dashoffset .2s linear;
+}
+
+.wrapper .task.completed {
+  background: #51ec6b1c;
+}
+
+.wrapper .task.completed:hover {
+  background: rgba(73, 230, 99, 0.198);
 }
 
 button {
