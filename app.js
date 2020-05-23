@@ -10,9 +10,18 @@ const popWindowAddBtn = document.getElementById('addBtn');
 const popWindowCancelBtn = document.getElementById('cancelBtn');
 const popWindowInput = document.querySelector('input');
 const userInput = document.querySelector('input');
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
+let dateHolder = document.querySelector('.date');
+let date = new Date();
+let datum = date.getDate();
 let arrayOfTasks = [];
+dateHolder.innerHTML = `${getOrdinalNum(datum)} / ${months[date.getMonth()]} / ${date.getFullYear()}`;
+
+function getOrdinalNum(n) {
+    return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
+}
 
 const removeClass = () =>{
     popWindow.classList.remove('active');
@@ -51,7 +60,11 @@ const renderTask = () => {
     taskList.append(newTask);
 
     removeBtn.addEventListener('click', () =>{
-        newTask.remove();
+        newTask.classList.add('deleted');
+        newTask.addEventListener('transitionend', () =>{
+           newTask.remove();
+        });
+        
     });
     checkBox.addEventListener('click', () =>{
         textHolder.classList.toggle('completed');
@@ -79,8 +92,3 @@ const addTaskHandler = () => {
   blackBackground.addEventListener('click', removeClass);
   popWindowCancelBtn.addEventListener('click', removeClass);
   popWindowAddBtn.addEventListener('click', addTaskHandler);
-
-
-
-
-{/* <svg viewBox="0 0 20 20"><style type="text/css">.st0{fill:none;stroke:#000000;stroke-width:0.8353;stroke-miterlimit:10;}</style><polyline class="st0" points="3.5,10.3 8,14.2 17.7,3 "/></svg> */}

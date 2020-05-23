@@ -55,6 +55,8 @@ body {
   height: 50px;
   line-height: 12px;
   margin: 5px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
   font-size: 1.3em;
 }
 
@@ -68,7 +70,7 @@ body {
 }
 
 .wrapper .taskList .task p {
-  margin-left: 3%;
+  margin-left: 1%;
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
@@ -139,6 +141,15 @@ body {
 
 .wrapper .task.completed:hover {
   background: rgba(73, 230, 99, 0.198);
+}
+
+.wrapper .task.deleted {
+  opacity: 0;
+  background: rgba(255, 71, 71, 0.931);
+}
+
+.wrapper .task.deleted:hover {
+  background: rgba(255, 71, 71, 0.931);
 }
 
 button {
