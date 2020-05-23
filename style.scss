@@ -33,6 +33,7 @@ h1{
 .task
     {
       display: flex;
+      opacity: 1;  
       justify-content: flex-start;
       position: relative;
       height: 50px;
@@ -48,11 +49,13 @@ h1{
       }
     p{
         margin-left: 3%;
+        transition: .2s linear;
     }
     p.completed{
         color: #777777;
         text-decoration: line-through;
     }
+    
    
     .checkbox,
     .rmvBtn
@@ -81,8 +84,30 @@ h1{
     }
     .checkbox{
         border: 1px solid black;
-        
-    }}}}
+        svg{
+            stroke:#22b33a;
+            stroke-width: 1.8;
+            fill:none;
+            margin-bottom: -10px;
+            stroke-dasharray: 25;
+            stroke-dashoffset: 25;
+            transition: stroke-dashoffset .2s linear;
+        }
+    }
+    .checkbox.completed{
+        svg{ 
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset .2s linear;
+        }
+    }
+}}
+.task.completed{
+    background: #51ec6b1c;
+    &:hover{
+    background: rgba(73, 230, 99, 0.198);
+    }
+}
+}
 
 button{
     width: 30%;
@@ -145,7 +170,6 @@ button{
     input{
         font-family: 'Indie Flower', cursive;
         border: 1px solid rgba(128, 128, 128, 0.65);
-        
         border-radius: 20px;
         width: 75%;
         margin: 7.4% 12.5% 2%;
