@@ -39,6 +39,7 @@ h1{
       height: 50px;
       line-height: 12px;
       margin: 5px;
+      transition: .3s ease;
       font-size: 1.3em;
       &:hover{
           background-color: rgba(170, 169, 169, 0.192);
@@ -48,15 +49,13 @@ h1{
           margin-bottom: 20px;
       }
     p{
-        margin-left: 3%;
+        margin-left: 1%;
         transition: .2s linear;
     }
     p.completed{
         color: #777777;
         text-decoration: line-through;
     }
-    
-   
     .checkbox,
     .rmvBtn
     {
@@ -105,6 +104,13 @@ h1{
     background: #51ec6b1c;
     &:hover{
     background: rgba(73, 230, 99, 0.198);
+    }
+}
+.task.deleted{
+    opacity: 0;
+    background: rgba(255, 71, 71, 0.931);
+    &:hover{
+    background: rgba(255, 71, 71, 0.931);
     }
 }
 }
@@ -248,7 +254,6 @@ button{
 @keyframes error{
     0%{
         transform: skewY(0deg);
-
     }
     15%{
         transform: skewY(2deg);
