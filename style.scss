@@ -29,7 +29,7 @@ h1{
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
-    
+    transition: .3s ease;
 .task
     {
       display: flex;
@@ -74,7 +74,6 @@ h1{
         }
     }
     .rmvBtn{
-        // background-color: #eb4d4b;
         position: absolute;
         right: 0%;
         svg{
@@ -107,7 +106,7 @@ h1{
     }
 }
 .task.deleted{
-    animation: deleted 0.5s ease-out;
+    animation: deleted 0.3s linear;
     background: rgba(255, 71, 71, 0.931);
     &:hover{
     background: rgba(255, 71, 71, 0.931);
@@ -200,10 +199,6 @@ button{
             color: rgba(255, 38, 38, 0.616);
            }
     }
-    
-    // input.error::placeholder{
-    //     color: ;
-    // }
     .btns{
         position: relative;
         width: 80%;
@@ -276,11 +271,11 @@ button{
 }
 @keyframes deleted{
     0%{
-        transform: translateY(0rem) rotateZ(0deg);
         opacity: 1;
+        transform: scale(1);
     }
     100%{
-        transform: translateY(8rem) rotateZ(20deg);
         opacity: 0;
+        transform: scale(0);
     }
 }
