@@ -41,6 +41,8 @@ body {
           flex-direction: column;
   width: 80%;
   margin: 0 auto;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .wrapper .taskList .task {
@@ -144,8 +146,8 @@ body {
 }
 
 .wrapper .task.deleted {
-  -webkit-animation: deleted 0.5s ease-out;
-          animation: deleted 0.5s ease-out;
+  -webkit-animation: deleted 0.3s linear;
+          animation: deleted 0.3s linear;
   background: rgba(255, 71, 71, 0.931);
 }
 
@@ -411,27 +413,27 @@ button:focus {
 
 @-webkit-keyframes deleted {
   0% {
-    -webkit-transform: translateY(0rem) rotateZ(0deg);
-            transform: translateY(0rem) rotateZ(0deg);
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: translateY(8rem) rotateZ(20deg);
-            transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
 @keyframes deleted {
   0% {
-    -webkit-transform: translateY(0rem) rotateZ(0deg);
-            transform: translateY(0rem) rotateZ(0deg);
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: translateY(8rem) rotateZ(20deg);
-            transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
