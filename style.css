@@ -144,7 +144,8 @@ body {
 }
 
 .wrapper .task.deleted {
-  opacity: 0;
+  -webkit-animation: deleted 0.5s ease-out;
+          animation: deleted 0.5s ease-out;
   background: rgba(255, 71, 71, 0.931);
 }
 
@@ -405,6 +406,32 @@ button:focus {
   100% {
     -webkit-transform: skewY(0deg);
             transform: skewY(0deg);
+  }
+}
+
+@-webkit-keyframes deleted {
+  0% {
+    -webkit-transform: translateY(0rem) rotateZ(0deg);
+            transform: translateY(0rem) rotateZ(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(8rem) rotateZ(20deg);
+            transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes deleted {
+  0% {
+    -webkit-transform: translateY(0rem) rotateZ(0deg);
+            transform: translateY(0rem) rotateZ(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(8rem) rotateZ(20deg);
+            transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

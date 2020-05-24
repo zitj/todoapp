@@ -4,7 +4,6 @@ const wrapper = document.querySelector('.wrapper');
 const addTaskBtn = document.getElementById('addTaskBtn');
 const blackBackground = document.querySelector('.blackBackground');
 const taskList = document.querySelector('.taskList');
-
 const popWindow = document.querySelector('.popWindow');
 const popWindowAddBtn = document.getElementById('addBtn');
 const popWindowCancelBtn = document.getElementById('cancelBtn');
@@ -35,6 +34,7 @@ const addClass = () =>{
     popWindow.classList.add('active');
     blackBackground.classList.add('active');
     wrapper.classList.add('hidden');
+   
 };
 
 const clearTaskInput = () => {
@@ -61,10 +61,10 @@ const renderTask = () => {
 
     removeBtn.addEventListener('click', () =>{
         newTask.classList.add('deleted');
-        newTask.addEventListener('transitionend', () =>{
+        newTask.classList.remove('completed');
+        newTask.addEventListener('animationend', () =>{
            newTask.remove();
         });
-        
     });
     checkBox.addEventListener('click', () =>{
         textHolder.classList.toggle('completed');
@@ -87,8 +87,11 @@ const addTaskHandler = () => {
         removeClass();
         clearTaskInput();
 }
-  
+
+
+
   addTaskBtn.addEventListener('click', addClass);
   blackBackground.addEventListener('click', removeClass);
   popWindowCancelBtn.addEventListener('click', removeClass);
   popWindowAddBtn.addEventListener('click', addTaskHandler);
+  
