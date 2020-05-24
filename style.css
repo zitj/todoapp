@@ -188,6 +188,10 @@ button:focus {
   outline: none;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .blackBackground {
   opacity: 0;
 }
