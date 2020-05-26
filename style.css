@@ -26,6 +26,12 @@ body {
           animation: fade-in .3s ease;
 }
 
+@media (max-width: 1440px) {
+  .wrapper {
+    padding-bottom: 6.4%;
+  }
+}
+
 .wrapper h1 {
   text-align: center;
   margin: 0 0 5%;
@@ -62,6 +68,12 @@ body {
   font-size: 1.3em;
 }
 
+@media (max-width: 1440px) {
+  .wrapper .taskList .task {
+    line-height: 10px;
+  }
+}
+
 .wrapper .taskList .task:hover {
   background-color: rgba(170, 169, 169, 0.192);
   cursor: pointer;
@@ -93,6 +105,13 @@ body {
           transform: scale(1);
   -webkit-transition: .2s ease;
   transition: .2s ease;
+}
+
+@media (max-width: 1440px) {
+  .wrapper .taskList .task .checkbox,
+  .wrapper .taskList .task .rmvBtn {
+    margin: 4%;
+  }
 }
 
 .wrapper .taskList .task .checkbox:hover,
