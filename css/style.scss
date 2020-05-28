@@ -214,7 +214,7 @@ button::-moz-focus-inner {
     opacity: 1;
     display: none; 
     width: 40%;
-    height: 25%;
+    height: 200px;
     background: white;
     z-index: 4;
     position: absolute;
@@ -227,7 +227,7 @@ button::-moz-focus-inner {
     @include media("<=desktop"){
         width: 60%;
         padding-bottom: 10%;
-        height: 10%;
+        height: 100px;
     }
     @include media("<=largerPhone"){
         width: 80%;
@@ -235,14 +235,9 @@ button::-moz-focus-inner {
     }
     @include media("<=middlePhone"){
         width: 90%;
-        padding-bottom: 22.5%;
-     }
-    @include media("<=standardPhone"){
-        padding-bottom: 27.6%;
      }
      @include media("<=smallPhone"){
         width: 95%;
-        padding-bottom: 30%;
      }
     input{
         font-family: 'Indie Flower', cursive;
