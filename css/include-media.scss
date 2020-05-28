@@ -30,7 +30,10 @@
 ///  $breakpoints: ('phone': 320px);
 ///
 $breakpoints: (
-  'phone': 320px,
+  'smallPhone': 320px,
+  'standardPhone': 380px,
+  'middlePhone': 480px,
+  'largerPhone': 680px,
   'tablet': 768px,
   'desktop': 1024px,
   'laptopHDPI': 1440px
