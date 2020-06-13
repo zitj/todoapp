@@ -86,6 +86,19 @@ const addTaskHandler = () => {
         clearTaskInput();
 }
 
+const enterAndEscape = event => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        addTaskBtn.click();
+    }
+    if(event.keyCode === 13 && popWindow.classList.contains('active')){
+        popWindowAddBtn.click();
+    }
+    if(event.keyCode === 27 && popWindow.classList.contains('active')){
+        popWindowCancelBtn.click();
+    }
+};
+
 /* LOCAL STORAGE START*/
 const saveLocalTodos = todo => {
     let todos;
@@ -149,8 +162,13 @@ const getTodos = () => {
         });
     });
 }
-/* LOCAL STORAGE END*/
 
+
+
+
+
+/* LOCAL STORAGE END*/
+  window.addEventListener('keyup', enterAndEscape);
   document.addEventListener('DOMContentLoaded', getTodos);  
   addTaskBtn.addEventListener('click', addClass);
   blackBackground.addEventListener('click', removeClass);
