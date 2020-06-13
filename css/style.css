@@ -354,16 +354,16 @@ button::-moz-focus-inner {
   border: 1px solid rgba(128, 128, 128, 0.65);
   border-radius: 20px;
   width: 75%;
-  margin: 7.4% 12.5% 2%;
+  margin: 4.7% 12.5% 2%;
   height: 50px;
   font-size: 1.4em;
   text-align: center;
   color: #333333;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   .popWindow input {
-    margin-top: 10%;
+    margin-top: 7.4%;
   }
 }
 
